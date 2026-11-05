@@ -1,19 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F5FC"
+    android:layoutDirection="rtl"
     tools:context=".MainActivity">
 
+    <!-- Main title -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:text="מה זה להיות ישראלי עבורי?"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#164A91"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Israeli flag -->
+    <ImageView
+        android:id="@+id/flagImage"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/israel_flag"
+        android:contentDescription="דגל ישראל"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Army service title -->
+    <TextView
+        android:id="@+id/armyTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text="שירות בצה״ל"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#164A91"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/flagImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Army service description -->
+    <TextView
+        android:id="@+id/armyDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="24dp"
+        android:text="לשרת בצבא, להגן על המדינה ולתרום לביטחונה."
+        android:textSize="16sp"
+        android:textColor="#34465B"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/armyTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Zionism title -->
+    <TextView
+        android:id="@+id/zionismTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="24dp"
+        android:text="ציונות"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#164A91"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/armyDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Zionism description -->
+    <TextView
+        android:id="@+id/zionismDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="24dp"
+        android:text="לאהוב את הארץ, להיות גאה במדינה ולפעול למענה."
+        android:textSize="16sp"
+        android:textColor="#34465B"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/zionismTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Unity title -->
+    <TextView
+        android:id="@+id/unityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="24dp"
+        android:text="אחדות"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#164A91"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/zionismDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Unity description -->
+    <TextView
+        android:id="@+id/unityDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="24dp"
+        android:text="להיות מאוחדים ולתמוך אחד בשני גם כשאנחנו שונים."
+        android:textSize="16sp"
+        android:textColor="#34465B"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/unityTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom button -->
+    <Button
+        android:id="@+id/proudButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="גאה להיות ישראלי!"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#164A91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
